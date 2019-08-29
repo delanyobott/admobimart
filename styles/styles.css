@@ -44,7 +44,7 @@ header h3 {
   color: goldenrod;
   border: 0.3em solid goldenrod;
   border-radius: 6em;
-  padding: 0.3em 0.18em;
+  padding: 0.3em 0.5em;
   margin-left: 0.2em;
 }
 
@@ -64,7 +64,7 @@ header h3 {
 .menu-toggle {
   position: absolute;
   top: 1.3em;
-  right: 9.3em;
+  right: 8.6em;
   border: 0;
   padding: 0.5em 1em;
   border: 0.15em solid goldenrod;
@@ -164,11 +164,12 @@ footer ul {
 }
 
 footer ul li {
-  margin-top: 1.5em;
+  margin-top: 3em;
 }
 
 footer a {
   color: goldenrod;
+  padding: 1em;
 }
 
 footer .top {

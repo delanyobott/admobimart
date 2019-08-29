@@ -1,0 +1,258 @@
+/* Global settings */
+:root {
+  box-sizing: border-box;
+  font-size: calc(1.2vw + 0.7em);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica nue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*Header, navigation and search bar */
+.top-header {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  background-color: rgb(4, 24, 68);
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header h3 {
+  color: goldenrod;
+  border: 0.3em solid goldenrod;
+  border-radius: 6em;
+  padding: 0.3em 0.18em;
+  margin-left: 0.2em;
+}
+
+.account-cart {
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.account-cart a {
+  padding: 0.5em;
+  border: 0.15em solid goldenrod;
+  margin: 0.2em;
+  color: gold;
+  border-radius: 0.3em;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 1.3em;
+  right: 9.3em;
+  border: 0;
+  padding: 0.5em 1em;
+  border: 0.15em solid goldenrod;
+  border-radius: 0.3em;
+  background-color: rgb(4, 24, 68);
+  color: gold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.menu-drop-down {
+  display: none;
+  position: absolute;
+  right: 40%;
+  left: 20%;
+  margin: 0;
+}
+
+.menu.is-open .menu-drop-down {
+  display: block;
+}
+
+.nav-menu {
+  margin: 0;
+  padding: 1em 9em 1em 2.5em;
+  background-color: rgb(4, 24, 68);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3em;
+}
+
+.nav-menu > li {
+  padding: 0;
+  margin: auto;
+}
+
+.nav-menu > li > a {
+  display: block;
+  margin-top: 0.7em;
+  padding: 0.5em 1.3em;
+  color: goldenrod;
+  border: 0.15em solid goldenrod;
+  border-radius: 0.3em;
+}
+
+.search-bar {
+  padding: 0 0.8em 0.3em;
+  margin: 0;
+  color: goldenrod;
+}
+
+.search-bar label {
+  padding-left: 1em;
+}
+
+input {
+  display: block;
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
+
+input[type="search"] {
+  flex: 2;
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border: 0.3em solid goldenrod;
+}
+
+.search-button {
+  display: flex;
+}
+
+input[type="submit"] {
+  border: 0.3em solid goldenrod;
+  background-color: goldenrod;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  color: rgb(4, 24, 68);
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  font-size: 90%;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(4, 24, 68);
+  color: goldenrod;
+  padding: 0 0 3em 0;
+  margin: 0;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  margin-top: 1.5em;
+}
+
+footer a {
+  color: goldenrod;
+}
+
+footer .top {
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  border: 0.2em solid goldenrod;
+  background-color: rgb(4, 24, 68);
+  margin: 0.8em 0 0 0;
+}
+
+/* Large Screen: 50em */
+@media (min-width: 50em) {
+  :root {
+    font-size: calc(1vw + 0.2em);
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: -1.2em;
+    right: 0.1em;
+    border: 0;
+    background-color: transparent;
+    font-size: 3em;
+    width: 1em;
+    height: 1em;
+    text-indent: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .menu-drop-down {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: -4.8em;
+    right: -10em;
+    margin: 0;
+    border-radius: 0.3em;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .nav-menu > li {
+    margin: 0;
+  }
+
+  .nav-menu > li > a {
+    border: 0.15em solid goldenrod;
+    margin: 0 0.5em;
+    padding: 0.5em 0.5em;
+    border-radius: 0.3em;
+  }
+
+  header h3 {
+    margin-left: 1em;
+  }
+
+  .search-button {
+    width: 48%;
+  }
+
+  input {
+    padding: 1em;
+  }
+
+  footer {
+    display: grid;
+    grid-template-areas: "first" "second";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    font-size: 90%;
+    padding: 4em 0;
+  }
+
+  footer > :first-child {
+    grid-area: first;
+    margin-left: 15em;
+  }
+
+  footer > :nth-child(2) {
+    margin-left: 10em;
+  }
+}

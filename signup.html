@@ -14,7 +14,7 @@
     <script defer src="/scripts/showPassword.js"></script>
     <title>Admobi Market | Account</title>
   </head>
-  <body class="login-page">
+  <body class="sign-up-page">
     <div id="top"></div>
     <!--Page header, navigation and main search bar-->
     <div class="top-header">
@@ -62,18 +62,22 @@
         <!--Login form-->
         <form action="#" method="post">
           <p>
-            Login with your email address and password. You can also use your
-            Admobi Pays account to login.
+            Welcome to Admobimart. Please fill in this form to create an
+            account. <span class="warning">All fields are required</span>.
           </p>
           <p>
-            If you are a new user, please go here to
-            <a href="/signup.html">create an account</a>
+            If you already have an Admobi Pays account, you can use it to
+            <a href="/account.html">login</a>.
           </p>
-          <label for="email">Email</label>
+
+          <label for="full-name">First name &amp; family name</label>
+          <input type="text" name="full-name" id="full-name" required />
+
+          <label for="email">Email Address</label>
           <input type="email" name="email" id="email" required />
 
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <label for="password">Strong Password</label>
+          <input type="password" name="password" id="password" required />
 
           <div class="manage-password">
             <p
@@ -84,13 +88,17 @@
             >
               Show Password
             </p>
-
-            <a href="/support/forgotpassword.html">
-              <p class="forgot-password">Forgot Password</p>
-            </a>
           </div>
 
-          <button type="submit">Login</button>
+          <label for="phone">Phone Number (eg, +233552133xxx)</label>
+          <input type="tel" name="phone" id="phone" required />
+
+          <p>
+            By creating an account you agree to our
+            <a href="/support/terms.html">Terms of Use</a> and
+            <a href="/support/privacy.html">Privacy Policy</a>
+          </p>
+          <button type="submit">Create Account</button>
         </form>
       </section>
     </main>

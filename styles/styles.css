@@ -1,7 +1,7 @@
 /* Global settings */
 :root {
   box-sizing: border-box;
-  font-size: calc(1.2vw + 0.7em);
+  font-size: calc(1.2vw + 0.7rem);
 }
 
 *,
@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: rgb(4, 24, 68);
+  color: rgb(245, 11, 147);
   text-decoration: none;
 }
 
@@ -24,13 +24,16 @@ ul {
   list-style: none;
 }
 
-/*Header, navigation and search bar */
+.warning {
+  color: red;
+}
+
+/*Header and navigation */
 .top-header {
   position: sticky;
   top: 0;
-  margin: 0;
-  background-color: rgb(4, 24, 68);
-  padding: 0;
+  background-color: #f1f1f1;
+  padding: 0.3rem 0.3rem 0.2rem;
 }
 
 header {
@@ -41,11 +44,12 @@ header {
 }
 
 header h3 {
-  color: goldenrod;
-  border: 0.3em solid goldenrod;
-  border-radius: 6em;
-  padding: 0.3em 0.5em;
-  margin-left: 0.2em;
+  color: rgb(4, 24, 68);
+  border: 0.15rem solid goldenrod;
+  border-radius: 6rem;
+  padding: 0 0.5rem;
+  margin: 0 0.2rem 0.2rem 0;
+  font-weight: normal;
 }
 
 .account-cart {
@@ -54,31 +58,34 @@ header h3 {
 }
 
 .account-cart a {
-  padding: 0.5em;
-  border: 0.15em solid goldenrod;
-  margin: 0.2em;
-  color: gold;
-  border-radius: 0.3em;
+  padding: 0.2rem 0.5rem;
+  border: 0.15rem solid goldenrod;
+  color: rgb(4, 24, 68);
+  margin: 0 0.4rem 0.2rem;
+  border-radius: 0.3rem;
 }
 
 .menu-toggle {
   position: absolute;
-  top: 1.3em;
-  right: 8.6em;
+  top: 0.25rem;
+  right: 10rem;
   border: 0;
-  padding: 0.5em 1em;
+  padding: 0.2rem 0.5rem;
   border: 0.15em solid goldenrod;
-  border-radius: 0.3em;
-  background-color: rgb(4, 24, 68);
-  color: gold;
+  border-radius: 0.3rem;
+  background-color: #f1f1f1;
+  color: rgb(4, 24, 68);
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1rem;
+  width: initial;
+  margin: initial;
+  font-weight: normal;
 }
 
 .menu-drop-down {
   display: none;
   position: absolute;
-  right: 40%;
+  right: 20%;
   left: 20%;
   margin: 0;
 }
@@ -89,11 +96,11 @@ header h3 {
 
 .nav-menu {
   margin: 0;
-  padding: 1em 9em 1em 2.5em;
-  background-color: rgb(4, 24, 68);
+  padding: 1rem 6rem 1rem 3rem;
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
 }
 
 .nav-menu > li {
@@ -103,42 +110,40 @@ header h3 {
 
 .nav-menu > li > a {
   display: block;
-  margin-top: 0.7em;
-  padding: 0.5em 1.3em;
-  color: goldenrod;
-  border: 0.15em solid goldenrod;
-  border-radius: 0.3em;
+  margin-top: 1rem;
+  padding: 0.5rem 1.3rem;
+  color: rgb(4, 24, 68);
+  border: 0.15rem solid goldenrod;
+  border-radius: 0.3rem;
+}
+
+/* Form */
+
+form {
+  padding: 0.5em 1.5em;
+  margin: 0;
 }
 
 .search-bar {
-  padding: 0 0.8em 0.3em;
-  margin: 0;
-  color: goldenrod;
-}
-
-.search-bar label {
-  padding-left: 1em;
+  padding: 0;
+  margin: 0.6rem 0.6rem 0 0.2rem;
+  display: flex;
 }
 
 input {
   display: block;
-  margin-top: 0.5em;
-  padding: 0.5em;
+  padding: 0.3rem 0.4rem;
 }
 
 input[type="search"] {
   flex: 2;
   border-top-left-radius: 2em;
   border-bottom-left-radius: 2em;
-  border: 0.3em solid goldenrod;
-}
-
-.search-button {
-  display: flex;
+  border: 0.15rem solid goldenrod;
 }
 
 input[type="submit"] {
-  border: 0.3em solid goldenrod;
+  border: 0.15rem solid goldenrod;
   background-color: goldenrod;
   border-top-right-radius: 2em;
   border-bottom-right-radius: 2em;
@@ -146,14 +151,101 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* main page */
-section {
-  border: 0.25em solid rgb(128, 139, 151);
-  margin: 0.3em;
-  border-radius: 0.1em;
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.2em 0 1.5em 0;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 0.3em;
 }
 
-.featured {
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0.7em;
+  width: 100%;
+  border: none;
+  margin: 0.5em 0;
+  cursor: pointer;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.show-password {
+  background-color: #4caf50;
+  padding: 0.5em 0.7em;
+  color: #fff;
+  border-radius: 0.3em;
+  cursor: pointer;
+  margin: 0;
+}
+
+#password {
+  margin-bottom: 0;
+}
+
+.forgot-password {
+  background-color: #ccc;
+  margin: 0 0 0 1em;
+  padding: 0.5em 0.7em;
+  border-radius: 0.3em;
+}
+
+.manage-password {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.toggle-account {
+  display: flex;
+  background-color: #f1f1f1;
+  padding-left: 0.4em;
+}
+
+.login {
+  padding: 1em 3.4em;
+  margin: 0;
+  color: rgb(4, 24, 68);
+}
+
+.sign-up {
+  margin: 0 auto;
+  color: rgb(4, 24, 68);
+  padding: 1em 2em;
+}
+
+.login-page .login,
+.sign-up-page .sign-up {
+  border-bottom: 0.2em solid rgb(245, 11, 147);
+  color: rgb(245, 11, 147);
+}
+
+/* main page */
+section {
+  border: 0.25em solid #ccc;
+  margin: 1em 0.3em;
+  border-radius: 0.3em;
+}
+
+.card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
@@ -167,7 +259,7 @@ section {
   display: flex;
   background-color: rgb(4, 24, 68);
   border-radius: 0.2em;
-  margin: 0.5em 0.3em;
+  margin: 0.4em;
 }
 
 .title h4,
@@ -175,12 +267,10 @@ section {
   flex: 2;
   margin: 0;
   color: goldenrod;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 0.8em;
 }
 
-.slides,
-.slides2,
-.featured figure {
+.card figure {
   margin: 0;
   padding: 0.3em;
   background-color: #fff;
@@ -191,21 +281,13 @@ img {
   height: 35vmin;
 }
 
-.popular {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
-  grid-gap: 0.1rem;
-  margin: 0 0.3em 0.3em 0.3em;
-  padding: 0;
-  background-color: rgb(4, 24, 68);
-}
-
 figcaption {
   width: 100%;
   padding: 0.3em 0.2em;
   text-align: center;
   border-radius: 0.2em;
+  text-decoration: underline;
+  color: rgb(4, 24, 68);
 }
 
 /* Footer */
@@ -214,20 +296,26 @@ footer {
   display: flex;
   font-size: 90%;
   flex-direction: column;
-  align-items: center;
   background-color: rgb(4, 24, 68);
   color: goldenrod;
-  margin: 0;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
 }
 
-footer ul {
-  padding: 0;
-  margin: 0;
+.footer-links {
+  display: grid;
+  grid-area: left right;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-self: center;
 }
 
-footer ul li {
+.footer-links ul {
   margin-bottom: 1em;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 1em 0;
 }
 
 footer a {
@@ -235,19 +323,27 @@ footer a {
   padding: 1em;
 }
 
-footer .top {
-  border: none;
-  padding: 0.5em;
+footer button {
+  padding: 0.4em 0;
   border-radius: 0.3em;
   border: 0.2em solid goldenrod;
   background-color: rgb(4, 24, 68);
-  margin: 0.5em 0 1em 0;
+  width: 45%;
+  align-self: center;
+}
+
+footer small {
+  align-self: center;
 }
 
 /* Large Screen: 50em */
 @media (min-width: 50em) {
   :root {
     font-size: calc(1vw + 0.2em);
+  }
+
+  .top-header {
+    padding: 0.8rem 0;
   }
 
   .menu-toggle {
@@ -270,54 +366,50 @@ footer .top {
 
   .nav-menu {
     position: absolute;
-    top: -4.8em;
-    right: -10em;
-    margin: 0;
-    border-radius: 0.3em;
+    top: -3.4em;
+    right: -13rem;
+    border-radius: 0.3rem;
     display: flex;
     flex-direction: row;
     background-color: transparent;
   }
 
+  .account-cart {
+    z-index: 1;
+  }
+
+  .account-cart a {
+    padding: 0.4rem 0.5rem;
+  }
+
   .nav-menu > li {
     margin: 0;
+    padding: 0;
   }
 
   .nav-menu > li > a {
-    border: 0.15em solid goldenrod;
-    margin: 0 0.5em;
-    padding: 0.5em 0.5em;
-    border-radius: 0.3em;
+    border: 0.15rem solid goldenrod;
+    margin: 0 0.5rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.3rem;
   }
 
   header h3 {
     margin-left: 1em;
+    padding: 0.4rem 0.5rem;
   }
 
-  .search-button {
-    width: 48%;
+  .search-bar {
+    position: absolute;
+    top: 1rem;
+    left: 14rem;
+    margin: 0;
+    padding: 0;
+    width: 40%;
   }
 
   input {
-    padding: 1em;
-  }
-
-  footer {
-    display: grid;
-    grid-template-areas: "first" "second";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    font-size: 90%;
-    padding: 4em 0;
-  }
-
-  footer > :first-child {
-    grid-area: first;
-    margin-left: 15em;
-  }
-
-  footer > :nth-child(2) {
-    margin-left: 10em;
+    padding: 0.5rem 1rem;
   }
 
   main {
@@ -325,10 +417,34 @@ footer .top {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
     grid-gap: 1em;
-    padding: 2em 3em;
+    padding: 1.5em;
+  }
+
+  main section {
+    margin: 0.2em 0.3em;
+  }
+
+  .tile-account {
+    display: initial;
+  }
+
+  .tile-account section {
+    margin: 1em 25em;
   }
 
   img {
     height: 30vmin;
+  }
+
+  footer {
+    padding-bottom: 1em;
+  }
+
+  .footer-links ul li {
+    margin: 1.5em 4em;
+  }
+
+  footer button {
+    width: 10%;
   }
 }
